@@ -1,0 +1,54 @@
+## Build results
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code settings
+.vscode/
+
+## Rider settings
+.idea/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# EF Core Migrations snapshots
+*MigrationsSnapshot.cs
+
+# Logs
+*.log
+
+# Secrets and local settings
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Database files (optional, if you use local .mdf)
+*.mdf
+*.ldf
+
+# NuGet packages (can be restored)
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
