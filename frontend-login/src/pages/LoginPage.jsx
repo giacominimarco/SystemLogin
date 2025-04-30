@@ -1,18 +1,21 @@
 ﻿import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMsg('');
     try {
-      const result = await login(username, password);
-      setMessage(result);
-    } catch (error) {
-      setMessage(error.response?.data || 'Erro na autenticação');
+      await login(username.trim(), password); // Salva o token
+      navigate('/users');  // Redireciona para a página de usuários
+    } catch (err) {
+      setErrorMsg('Credenciais inválidas ou erro de autenticação.' + err);
     }
   };
 
@@ -23,20 +26,20 @@ function LoginPage() {
         <input
           type="text"
           value={username}
-          placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
+          placeholder="Usuário"
           required
         />
         <input
           type="password"
           value={password}
-          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="Senha"
           required
         />
         <button type="submit">Entrar</button>
+        {errorMsg && <p>{errorMsg}</p>}
       </form>
-      <p>{message}</p>
     </div>
   );
 }
