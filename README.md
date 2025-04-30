@@ -36,7 +36,7 @@ O projeto está dividido em duas partes:
 1. **Clone o repositório**: Clone o repositório do projeto para o seu diretório local:
 
     ```bash
-    git clone https://github.com/seu-usuario/SystemLogin.git
+    git clone https://github.com/giacominimarco/SystemLogin.git
     ```
 
 2. **Navegue até a pasta do backend**: No terminal, vá até a pasta do projeto backend:
