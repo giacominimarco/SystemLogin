@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
+import '../styles/LoginPage.css';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
@@ -12,33 +13,33 @@ function LoginPage() {
     e.preventDefault();
     setErrorMsg('');
     try {
-      await login(username.trim(), password); // Salva o token
-      navigate('/users');  // Redireciona para a página de usuários
+      await login(username.trim(), password);
+      navigate('/users');
     } catch (err) {
-      setErrorMsg('Credenciais inválidas ou erro de autenticação.' + err);
+      setErrorMsg('Credenciais inválidas ou erro de autenticação.');
     }
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="login-container">
+      <form className="login-box" onSubmit={handleSubmit}>
+        <h1>User Log in</h1>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="Usuário"
+          placeholder="User ID"
           required
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Senha"
+          placeholder="Password"
           required
         />
-        <button type="submit">Entrar</button>
-        {errorMsg && <p>{errorMsg}</p>}
+        <button type="submit">LOGIN</button>
+        {errorMsg && <p className="error-message">{errorMsg}</p>}
       </form>
     </div>
   );
