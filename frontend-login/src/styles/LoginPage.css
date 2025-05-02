@@ -32,6 +32,8 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color: #4b4444;
+  background-color: #ccc;
 }
 
 .login-box button {

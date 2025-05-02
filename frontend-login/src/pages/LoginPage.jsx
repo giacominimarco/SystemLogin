@@ -28,7 +28,7 @@ function LoginPage() {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="User ID"
+          placeholder="Login"
           required
         />
         <input
