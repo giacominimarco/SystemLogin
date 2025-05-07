@@ -13,7 +13,7 @@ O projeto está dividido em duas partes:
 ## Tecnologias Utilizadas
 
 ### Backend
-- **ASP.NET Core 9.0**
+- **ASP.NET Core 8.0**
 - **SQL Server**
 - **Entity Framework Core** (para comunicação com o banco de dados)
 - **JWT** (para autenticação)
@@ -28,7 +28,7 @@ O projeto está dividido em duas partes:
 ### 1. Rodando o Backend (API)
 
 #### Pré-requisitos
-- **.NET 9.0 SDK** instalado (Baixe o .NET SDK)
+- **.NET 8.0 SDK** instalado (Baixe o .NET SDK)
 - **SQL Server** (ou SQL Server Express) instalado e rodando (Baixe o SQL Server)
 
 #### Passos
@@ -127,7 +127,7 @@ O projeto está dividido em duas partes:
 
 Antes de rodar o projeto, certifique-se de que você tem os seguintes softwares instalados:
 
-- **.NET SDK 9.0**: [Baixe o .NET SDK](https://dotnet.microsoft.com/download)
+- **.NET SDK 8.0**: [Baixe o .NET SDK](https://dotnet.microsoft.com/download)
 - **SQL Server** (ou SQL Server Express): [Baixe o SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - **Node.js** (versão >= 16.8): [Baixe o Node.js](https://nodejs.org/en/download/)
 - **npm** (gerenciador de pacotes do Node.js): O npm já vem com o Node.js, então, ao instalar o Node.js, o npm também será instalado.
