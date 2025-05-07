@@ -13,7 +13,7 @@ O projeto está dividido em duas partes:
 ## Tecnologias Utilizadas
 
 ### Backend
-- **ASP.NET Core 9.0**
+- **ASP.NET Core 8.0**
 - **SQL Server**
 - **Entity Framework Core** (para comunicação com o banco de dados)
 - **JWT** (para autenticação)
@@ -28,7 +28,7 @@ O projeto está dividido em duas partes:
 ### 1. Rodando o Backend (API)
 
 #### Pré-requisitos
-- **.NET 9.0 SDK** instalado (Baixe o .NET SDK)
+- **.NET 8.0 SDK** instalado (Baixe o .NET SDK)
 - **SQL Server** (ou SQL Server Express) instalado e rodando (Baixe o SQL Server)
 
 #### Passos
