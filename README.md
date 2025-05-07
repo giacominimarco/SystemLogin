@@ -1,7 +1,7 @@
 # SystemLogin
-Sistema de Login com React, ASP.NET Core 8, JWT e SQL Server
+Sistema de Login com React, .NET Core e SQL Server
 
-Este projeto é um sistema de login completo que utiliza React para o frontend, ASP.NET Core 8 para o backend e SQL Server para armazenamento de dados. Ele implementa autenticação via REST API com suporte a paginação para listar usuários e autenticação baseada em tokens JWT.
+Este projeto é um sistema de login completo que utiliza React para o frontend, .NET Core para o backend e SQL Server para armazenamento de dados. Ele implementa autenticação via REST API com suporte a paginação para listar usuários.
 
 ## Estrutura do Projeto
 
@@ -17,7 +17,6 @@ O projeto está dividido em duas partes:
 - **SQL Server**
 - **Entity Framework Core** (para comunicação com o banco de dados)
 - **JWT** (para autenticação)
-- **Swagger** (documentação da API)
 
 ### Frontend
 - **React 18.x**
@@ -62,7 +61,7 @@ O projeto está dividido em duas partes:
     }
     ```
 
-    **Nota**: Se você estiver usando o SQL Server Express, pode ser necessário ajustar a string de conexão, por exemplo:
+    **Nota**: Se você estiver usando o SQL Server Express, pode ser necessário ajustar a string de conexão, por exemplo, para:
 
     ```json
     "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=SystemLogin;Trusted_Connection=True;"
@@ -83,10 +82,6 @@ O projeto está dividido em duas partes:
     ```
 
     O backend estará rodando por padrão em `http://localhost:5129`.
-
-    ⚠️ Atualmente, os usuários são mantidos em memória (`UserRepository`) e não persistem no banco. Eles são recriados a cada reinício da aplicação.
-
-    ⚠️ As senhas dos usuários são armazenadas com hash utilizando `PasswordHasher<T>`. Para adicionar usuários manualmente ao banco, é necessário aplicar a mesma função de hash.
 
 ### 2. Rodando o Frontend (React)
 
@@ -169,12 +164,6 @@ A API possui os seguintes endpoints:
 - **Erro 404 na API**: Verifique se a API está rodando corretamente e acessível na URL correta (`http://localhost:5129`).
 - **Erro ao conectar ao banco de dados**: Verifique a string de conexão no arquivo `appsettings.json` e se o SQL Server está rodando corretamente.
 - **Erro de dependências no frontend**: Certifique-se de que todas as dependências foram instaladas corretamente com `npm install` ou `yarn install`.
-
-## Melhorias Futuras
-
-- Persistência de usuários no banco via Entity Framework Core.
-- Implementação de roles e controle de acesso por perfil.
-- Recuperação de senha e autenticação por e-mail.
 
 ## Conclusão
 
