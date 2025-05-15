@@ -14,15 +14,15 @@ namespace ProjetoLogin.API.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            var hasher = new PasswordHasher<User>();
-            var admin = new User
+            PasswordHasher<User> hasher = new PasswordHasher<User>();
+            User admin = new User
             {
                 Id = 1,
                 Username = "admin",
             };
             admin.Password = hasher.HashPassword(admin, "1234");
 
-            var user = new User
+            User user = new User
             {
                 Id = 2,
                 Username = "user",

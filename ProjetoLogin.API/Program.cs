@@ -7,7 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 
 // Registrar CORS
 builder.Services.AddCors(options =>
@@ -33,7 +33,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        var secretKey = builder.Configuration["JwtSettings:SecretKey"];
+        string? secretKey = builder.Configuration["JwtSettings:SecretKey"];
         if (string.IsNullOrEmpty(secretKey))
             throw new InvalidOperationException("JwtSettings:SecretKey não está configurado.");
 
@@ -88,7 +88,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-var app = builder.Build();
+WebApplication? app = builder.Build();
 
 // Pipeline de execução
 app.UseCors("AllowFrontend");
