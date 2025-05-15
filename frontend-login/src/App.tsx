@@ -4,7 +4,7 @@ import LoginPage from './pages/LoginPage';
 import UserListPage from './pages/UserListPage';
 import PrivateRoute from './components/PrivateRoute';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Routes>
@@ -23,4 +23,6 @@ export default function App() {
       </Routes>
     </Router>
   );
-}
+};
+
+export default App;
