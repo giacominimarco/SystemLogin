@@ -1,15 +1,15 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
 import '../styles/LoginPage.css';
 
 function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [errorMsg, setErrorMsg] = useState<string>('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setErrorMsg('');
     try {

@@ -1,15 +1,20 @@
 ﻿import React, { useEffect, useState } from 'react';
-import { fetchUsers, logout } from '../services/api';
+import { fetchUsers, logout, User } from '../services/api';
 import Pagination from '../components/Pagination';
 import { useNavigate } from 'react-router-dom';
 import '../styles/UserList.css';
 
+interface FetchUsersResponse {
+  users: User[];
+  total: number;
+}
+
 function UserListPage() {
-  const [users, setUsers] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [users, setUsers] = useState<User[]>([]);
+  const [total, setTotal] = useState<number>(0);
+  const [page, setPage] = useState<number>(1);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>('');
   const pageSize = 10;
   const navigate = useNavigate();
 
@@ -18,7 +23,7 @@ function UserListPage() {
       setLoading(true);
       setError('');
       try {
-        const data = await fetchUsers(page, pageSize);
+        const data: FetchUsersResponse = await fetchUsers(page, pageSize);
         setUsers(Array.isArray(data.users) ? data.users : []);
         setTotal(Number(data.total) || 0);
       } catch (e) {
