@@ -1,27 +1,38 @@
 # SystemLogin
+
 Sistema de Login com React, .NET Core e SQL Server
 
 Este projeto é um sistema de login completo que utiliza React para o frontend, .NET Core para o backend e SQL Server para armazenamento de dados. Ele implementa autenticação via REST API com suporte a paginação para listar usuários.
 
+---
+
 ## Estrutura do Projeto
 
-O projeto está dividido em duas partes:
+O projeto está dividido em três partes principais:
 
-- **Frontend**: Uma aplicação React utilizando Vite para desenvolvimento rápido.
-- **Backend**: Uma API REST desenvolvida com ASP.NET Core para autenticação e gerenciamento de usuários.
+- **Frontend**: Aplicação React utilizando Vite para desenvolvimento rápido.
+- **Backend**: API REST desenvolvida com ASP.NET Core para autenticação e gerenciamento de usuários.
+- **Testes Unitários**: Projeto de testes com `xUnit` para validar o comportamento da aplicação no backend.
+
+---
 
 ## Tecnologias Utilizadas
 
 ### Backend
 - **ASP.NET Core 8.0**
 - **SQL Server**
-- **Entity Framework Core** (para comunicação com o banco de dados)
-- **JWT** (para autenticação)
+- **Entity Framework Core**
+- **JWT (JSON Web Tokens)**
+- **xUnit** (para testes)
+- **Moq** (para mocks em testes)
 
 ### Frontend
 - **React 18.x**
-- **Vite** (para desenvolvimento e build)
-- **Axios** (para chamadas à API)
+- **TypeScript**
+- **Vite**
+- **Axios**
+
+---
 
 ## Como Rodar o Projeto
 
@@ -123,6 +134,51 @@ O projeto está dividido em duas partes:
 
     O frontend estará rodando em `http://localhost:5173`.
 
+
+
+### 3. Rodando os Testes Unitários
+
+#### Estrutura de Testes
+
+Os testes do backend estão localizados no projeto:
+
+```
+SystemLogin/ProjetoLogin.API.Tests/
+```
+
+Este projeto utiliza **xUnit** como framework de testes e **Moq** para criação de objetos simulados (mocks). Os testes abrangem, principalmente, a lógica de autenticação e geração de tokens da camada `UserService`.
+
+#### Executando os testes
+
+1. Navegue até a raiz do repositório (ou mantenha-se lá mesmo):
+```bash
+cd SystemLogin
+```
+
+2. Execute os testes com o comando:
+
+```bash
+dotnet test
+```
+
+Esse comando compilará o projeto de testes, executará os testes e exibirá um resumo com os resultados (total, sucesso ou falha).
+
+#### Dependências utilizadas nos testes
+
+- `xunit`
+- `xunit.runner.visualstudio`
+- `Moq`
+- `Microsoft.NET.Test.Sdk`
+
+Estas dependências já estão configuradas no `.csproj` do projeto de testes.
+
+
+### Sobre `UnitTest1.cs`
+
+O arquivo `UnitTest1.cs` é criado automaticamente como exemplo ao iniciar o projeto de testes com `xUnit`. Ele **pode ser removido com segurança** se você já escreveu seus próprios testes (ex: `UserServiceTests.cs`).
+
+---
+
 ## O que deve estar instalado
 
 Antes de rodar o projeto, certifique-se de que você tem os seguintes softwares instalados:
@@ -167,4 +223,4 @@ A API possui os seguintes endpoints:
 
 ## Conclusão
 
-Agora, com as instruções acima, você deverá ser capaz de rodar tanto o backend quanto o frontend do projeto. Se surgir algum erro ou dúvida, sinta-se à vontade para perguntar!
+Este projeto demonstra uma aplicação full stack moderna com autenticação via JWT e testes automatizados no backend.
