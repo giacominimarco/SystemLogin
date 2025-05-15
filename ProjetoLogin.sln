@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoLogin.API", "ProjetoLogin.API\ProjetoLogin.API.csproj", "{A5959857-31BF-4A4B-A6B4-95E7A10CDC7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoLogin.API.Tests", "ProjetoLogin.API.Tests\ProjetoLogin.API.Tests.csproj", "{750B56B4-A3CC-4BCB-B6CA-1EE710785248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{A5959857-31BF-4A4B-A6B4-95E7A10CDC7B}.Release|x64.Build.0 = Release|Any CPU
 		{A5959857-31BF-4A4B-A6B4-95E7A10CDC7B}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5959857-31BF-4A4B-A6B4-95E7A10CDC7B}.Release|x86.Build.0 = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|x64.Build.0 = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Debug|x86.Build.0 = Debug|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|x64.ActiveCfg = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|x64.Build.0 = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|x86.ActiveCfg = Release|Any CPU
+		{750B56B4-A3CC-4BCB-B6CA-1EE710785248}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
